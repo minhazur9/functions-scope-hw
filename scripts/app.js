@@ -7,3 +7,18 @@
 // 2. A return only passes an output, usually to another function or variable. Console.log just prints out to the console.
 // 3. The function being able to return a value gives it the abilty to pass its outputted value as an argument to another function.
 
+// Palindrome again.
+
+function checkPalindrome(word){
+    reverse = word.split('').reverse().join('');
+    if(word === reverse) {
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
+console.log(checkPalindrome('radar'));
+console.log(checkPalindrome('borscht'));
+
