@@ -33,8 +33,20 @@
 
 // Pythagoras
 
-function calculateSide(sideA, sideB){
-    return Math.sqrt((sideA ** 2) + (sideB ** 2));
+// function calculateSide(sideA, sideB){
+//     return Math.sqrt((sideA ** 2) + (sideB ** 2));
+// }
+
+// console.log(calculateSide(8,6));
+
+// Sum Array
+
+function sumArray(array){
+    let sum = 0;
+    for(let i = 0; i < array.length; i++){
+        sum += array[i];
+    }
+    return sum;
 }
 
-console.log(calculateSide(8,6));
+console.log(sumArray([1, 2, 3, 4, 5, 6]));
