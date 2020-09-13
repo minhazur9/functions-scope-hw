@@ -9,35 +9,35 @@
 
 // Palindrome again
 
-// function checkPalindrome(word){
-//     reverse = word.split('').reverse().join('');
-//     if(word === reverse) return true;
-//     else return false;
-// }
+function checkPalindrome(word){
+    reverse = word.split('').reverse().join('');
+    if(word === reverse) return true;
+    else return false;
+}
 
-// console.log(checkPalindrome('radar'));
-// console.log(checkPalindrome('borscht'));
+console.log(checkPalindrome('radar'));
+console.log(checkPalindrome('borscht'));
 
 // Digit Sum
 
-// function sumDigits(num){
-//     const numArr = num.toString().split('');
-//     let sum = 0;
-//     for(let i = 0; i < numArr.length; i++){
-//         sum += Number(numArr[i]);
-//     }
-//     return sum;
-// }
+function sumDigits(num){
+    const numArr = num.toString().split('');
+    let sum = 0;
+    for(let i = 0; i < numArr.length; i++){
+        sum += Number(numArr[i]);
+    }
+    return sum;
+}
 
-// console.log(sumDigits(42));
+console.log(sumDigits(42));
 
 // Pythagoras
 
-// function calculateSide(sideA, sideB){
-//     return Math.sqrt((sideA ** 2) + (sideB ** 2));
-// }
+function calculateSide(sideA, sideB){
+    return Math.sqrt((sideA ** 2) + (sideB ** 2));
+}
 
-// console.log(calculateSide(8,6));
+console.log(calculateSide(8,6));
 
 // Sum Array
 
@@ -50,3 +50,21 @@ function sumArray(array){
 }
 
 console.log(sumArray([1, 2, 3, 4, 5, 6]));
+
+// Prime Numbers
+
+function checkPrime(num){
+    for(let i = 2; i <= Math.sqrt(num); i++){
+        if(num % i === 0) return false;
+    }
+    return true;
+}
+
+function printPrimes(limit){
+    for(let i = 2; i <= limit; i++){
+        if(checkPrime(i)) console.log(i);
+    }
+}
+
+printPrimes(97);
+
