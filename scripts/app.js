@@ -9,85 +9,65 @@
 
 // Palindrome again
 
-// function checkPalindrome(word){
-//     reverse = word.split('').reverse().join('');
-//     if(word === reverse) return true;
-//     else return false;
-// }
+function checkPalindrome(word){
+    reverse = word.split('').reverse().join('');
+    if(word.toUpperCase() === reverse.toUpperCase()) return true;
+    else return false;
+}
 
-// console.log(checkPalindrome('radar'));
-// console.log(checkPalindrome('borscht'));
+ console.log(checkPalindrome('Radar'));
+ console.log(checkPalindrome('Borscht'));
 
 // // Digit Sum
 
-// function sumDigits(num){
-//     const numArr = num.toString().split('');
-//     let sum = 0;
-//     for(let i = 0; i < numArr.length; i++){
-//         sum += Number(numArr[i]);
-//     }
-//     return sum;
-// }
+function sumDigits(num){
+    const numArr = num.toString().split('');
+    let sum = 0;
+    for(let i = 0; i < numArr.length; i++){
+        sum += Number(numArr[i]);
+    }
+    return sum;
+}
 
-// console.log(sumDigits(42));
+console.log(sumDigits(42));
 
 // // Pythagoras
 
-// function calculateSide(sideA, sideB){
-//     return Math.sqrt((sideA ** 2) + (sideB ** 2));
-// }
+function calculateSide(sideA, sideB){
+    return Math.sqrt((sideA ** 2) + (sideB ** 2));
+}
 
 // console.log(calculateSide(8,6));
 
-// // Sum Array
+// Sum Array
 
-// function sumArray(array){
-//     let sum = 0;
-//     for(let i = 0; i < array.length; i++){
-//         sum += array[i];
-//     }
-//     return sum;
-// }
+function sumArray(array){
+    let sum = 0;
+    for(let i = 0; i < array.length; i++){
+        sum += array[i];
+    }
+    return sum;
+}
 
 // console.log(sumArray([1, 2, 3, 4, 5, 6]));
 
-// // Prime Numbers
+// Prime Numbers
 
-// function checkPrime(num){
-//     for(let i = 2; i <= Math.sqrt(num); i++){
-//         if(num % i === 0) return false;
-//     }
-//     return true;
-// }
-
-// function printPrimes(limit){
-//     for(let i = 2; i <= limit; i++){
-//         if(checkPrime(i)) console.log(i);
-//     }
-// }
-
-// printPrimes(97);
-
-// function insertDash(num){
-//     const numArr = num.toString().split('');
-//     const newArr = [];
-//     let prevOdd = false;
-//     for(let i = 0; i < numArr.length; i++){
-//         if(numArr[i] % 2 !== 0 && prevOdd) newArr.push('-'); 
-//         newArr.push(numArr[i]);
-//         if(numArr[i] % 2 === 0) prevOdd = false;
-//         if(numArr[i] % 2 !== 0) prevOdd = true;
-//     }
-//     return newArr.join('');
-// }
-// console.log(insertDash(454793));
-
-function reverseString(word){
-    let reversed = '';
-    for(let i = word.length-1; i >= 0; i-- ){
-        reversed += word.substring(i,i+1);
+function checkPrime(num){
+    for(let i = 2; i <= Math.sqrt(num); i++){
+        if(num % i === 0) return false;
     }
-    return reversed;
+    return true;
 }
 
-console.log(reverseString("commit"));
+function printPrimes(limit){
+    for(let i = 2; i <= limit; i++){
+        if(checkPrime(i)) console.log(i);
+    }
+}
+
+printPrimes(97);
+
+
+
+
