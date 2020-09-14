@@ -68,16 +68,26 @@
 
 // printPrimes(97);
 
-function insertDash(num){
-    const numArr = num.toString().split('');
-    const newArr = [];
-    let prevOdd = false;
-    for(let i = 0; i < numArr.length; i++){
-        if(numArr[i] % 2 !== 0 && prevOdd) newArr.push('-'); 
-        newArr.push(numArr[i]);
-        if(numArr[i] % 2 === 0) prevOdd = false;
-        if(numArr[i] % 2 !== 0) prevOdd = true;
+// function insertDash(num){
+//     const numArr = num.toString().split('');
+//     const newArr = [];
+//     let prevOdd = false;
+//     for(let i = 0; i < numArr.length; i++){
+//         if(numArr[i] % 2 !== 0 && prevOdd) newArr.push('-'); 
+//         newArr.push(numArr[i]);
+//         if(numArr[i] % 2 === 0) prevOdd = false;
+//         if(numArr[i] % 2 !== 0) prevOdd = true;
+//     }
+//     return newArr.join('');
+// }
+// console.log(insertDash(454793));
+
+function reverseString(word){
+    let reversed = '';
+    for(let i = word.length-1; i >= 0; i-- ){
+        reversed += word.substring(i,i+1);
     }
-    return newArr.join('');
+    return reversed;
 }
-console.log(insertDash(454793));
+
+console.log(reverseString("commit"));
